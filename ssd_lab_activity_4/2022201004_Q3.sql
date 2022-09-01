@@ -10,4 +10,4 @@ BEGIN
 END //
 DELIMITER ;
 
--- CALL GetCustomConditionCustomers();
+--CALL GetCustomConditionCustomers();

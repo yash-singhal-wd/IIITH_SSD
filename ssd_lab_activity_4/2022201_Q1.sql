@@ -10,4 +10,4 @@ BEGIN
 END //
 DELIMITER ;
 
--- CALL addTwoNums(45,24,@res);
+--CALL addTwoNums(24,45,@res);

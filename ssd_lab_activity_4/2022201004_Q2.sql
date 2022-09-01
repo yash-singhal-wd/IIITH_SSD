@@ -9,4 +9,6 @@ BEGIN
 END //
 DELIMITER ;
 
--- CALL GetCustomersByCity('Bangalore');
+--CALL GetCustomersByCity('Bangalore');
+
+
