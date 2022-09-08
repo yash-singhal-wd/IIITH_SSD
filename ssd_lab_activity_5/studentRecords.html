@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+</style>
+<body class="record-body">
+    <h1 style="text-align:center" >Student Records</h1>
+    <div class="record-flex">
+        <div class="record-flex2">
+            <input id="roll" style="height:40px; margin: 5px;" type="text" placeholder="Roll Number">
+            <input id="name" style="height:40px; margin: 5px;" type="text" placeholder="Name">
+            <button class="green" onclick="populate_array()" style="height:40px; margin: 5px;"> Add New </button> 
+        </div>
+    </div>
+    <div class="record-flex" >
+        <table id="table-container">
+        </table>
+        <br><br>
+    </div>
+    <div class="justify">
+        <br><br><br>
+        <button class="red" style="display:block; text-align:center" onclick="delete_array()" style="height:40px; margin: 5px;" > Delete Last </button>
+    </div>
+</body>
+<script>
+    let i=0;
+    let arr = [];
+    function populate_array(){
+        let roll = document.getElementById('roll').value;
+        let name = document.getElementById('name').value;
+        console.log(roll);
+        console.log(name);
+        let stu_object = {"roll":roll, "name":name};
+        arr.push(stu_object);
+        console.log(arr);
+        i++;
+        document.getElementById('roll').value="";
+        document.getElementById('name').value="";
+        display_array();
+    }
+
+    function display_array(){
+        let len=arr.length;
+        var html = "<tr><th>Roll Number</th> <th>Name</th> </tr>";
+        for(let i=0; i<len; ++i){
+            html+= "<tr><td>" + arr[i].roll + "</td>";
+            html+= "<td>" + arr[i].name+ "</td></tr>";
+
+            console.log(html);
+        }
+        document.getElementById('table-container').innerHTML = html;
+    } 
+
+    function delete_array(){
+        arr.pop();
+        document.getElementById('roll').value="";
+        document.getElementById('name').value="";
+        display_array();
+    }
+
+</script>
+</html>
