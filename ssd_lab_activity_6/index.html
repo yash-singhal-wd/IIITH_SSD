@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team From</title>
+    <script src="externjs.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+    </style>
+<body>
+    <h1>Team Form</h1>
+    <form name="myForm" onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td>
+                    Manager Name: 
+                </td>
+                <td>
+                    &nbsp; &nbsp; <input type="text" name="m_name" id="m_name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Group Email: 
+                </td>
+                <td>
+                    &nbsp; &nbsp; <input type="email" name="g_name" id="g_name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Server Username:
+                </td>
+                <td>
+                    &nbsp; &nbsp; <input type="text" name="s_name" id="s_name" onkeydown="myFunction(event)" required>
+                </td>
+                <td id="s_con">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Server Password:
+                </td>
+                <td>
+                    &nbsp; &nbsp; <input type="password" name="s_pass" id="s_pass" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Confirm Password:
+                </td>
+                <td>
+                    &nbsp; &nbsp; <input type="password" name="cs_pass" id="cs_pass" onfocusout="passcheck()" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Team Members:
+                </td>
+                <td>
+                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+                        Maheshwari
+                        </div>
+                        <div draggable="true" ondragstart="drag(event)" id="drag2" width="88" height="31">
+                        Avishek
+                        </div>
+                        <div draggable="true" ondragstart="drag(event)" id="drag3" width="88" height="31">
+                        Mohit
+                        </div>
+                        <div draggable="true" ondragstart="drag(event)" id="drag4" width="88" height="31">
+                        Priyanshu
+                        </div>
+                        <div draggable="true" ondragstart="drag(event)" id="drag5" width="88" height="31">
+                        Shivani
+                        </div>
+                    </div>
+                </td>
+                <td>
+                <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        
+                    </div>
+                </td>
+                <tr>
+
+                    <td>
+                        <input type="submit" value="Submit"></td>
+                </tr>
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+</html>
